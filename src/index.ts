@@ -13,7 +13,7 @@ async function bootstrap() {
   |-> name      : ${config.systemInfo.projectName}
   |-> version   : v${config.systemInfo.version}
   |-> port      : ${config.port}
-  |-> env       : ${config.env}
+  |-> env       : ${config.env}11
   |-> --------------------------------------------------
   `);
   });
