@@ -12,18 +12,18 @@ const proConfig: any = {
   enableReplay: false,
   secret: 'WUYUPEI',
   mysqlConfig: {
-    host: '8.219.66.21',
+    host: '8.141.63.127',
     port: 3306,
     username: 'root',
-    password: '123456',
+    password: '123456.',
     database: 'douyin',
     dialect: 'mysql',
     logging: false,
   },
   redisConfig: {
     port: 6379,
-    host: '8.219.66.21',
-    password: '19781209Wyp',
+    host: '8.141.63.127',
+    password: '123456.',
     db: 2,
   },
 };
