@@ -41,8 +41,8 @@ jobs:
             pm2 ls
             pm2 stop douyin
             pm2 delete douyin
+            echo "stop ..."
             cd /home/nodeServer/douyin
-            ls
             git pull
             pm2 start -n douyin  npm -- run pro
-            pm2 ls
+            echo "running ..."
