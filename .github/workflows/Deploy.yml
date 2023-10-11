@@ -35,7 +35,7 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.ACCESS_TOKEN }}
+          password: ${{ secrets.ACCESS_PASSWORD }}
           port: 22
           script: |
             pm2 ls
