@@ -7,17 +7,17 @@ const devConfig: any = {
   enableReplay: false,
   secret: 'WUYUPEI',
   mysqlConfig: {
-    host: '8.219.66.21',
+    host: '127.0.0.1',
     port: 3306,
     username: 'root',
     password: '123456',
-    database: 'douyin',
+    database: 'aaa',
     dialect: 'mysql',
     logging: false,
   },
   redisConfig: {
     port: 6379,
-    host: '8.219.66.21',
+    host: '127.0.0.1',
     db: 2,
   },
 };

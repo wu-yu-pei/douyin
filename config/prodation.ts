@@ -28,8 +28,6 @@ const proConfig: any = {
   },
 };
 
-const res = _.merge(proConfig, defaultConfig);
-
-console.log(res, '---');
+_.merge(proConfig, defaultConfig);
 
 export default proConfig;
