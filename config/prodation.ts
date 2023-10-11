@@ -11,7 +11,25 @@ const proConfig: any = {
   port: 3333,
   enableReplay: false,
   secret: 'WUYUPEI',
+  mysqlConfig: {
+    host: '8.219.66.21',
+    port: 3306,
+    username: 'root',
+    password: '123456',
+    database: 'douyin',
+    dialect: 'mysql',
+    logging: false,
+  },
+  redisConfig: {
+    port: 6379,
+    host: '8.219.66.21',
+    password: '19781209Wyp',
+    db: 2,
+  },
 };
 
-_.merge(proConfig, defaultConfig);
+const res = _.merge(proConfig, defaultConfig);
+
+console.log(res, '---');
+
 export default proConfig;
