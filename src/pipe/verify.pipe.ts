@@ -6,8 +6,6 @@ import config from '../../config';
 import crypto from 'crypto';
 
 class VerifyParamsPipe extends BasePipe {
-  console.log("*********");
-  
   // 参数校验 必填参数
   required(paramsList: string[], paramsPosition = ParamsPosition.BODY) {
     return (req: Request, res: Response, next: NextFunction) => {
