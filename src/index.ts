@@ -9,13 +9,13 @@ async function bootstrap() {
 
   app.listen(config.port, () => {
     console.log(`
-  |-> -----------------run success---------------------
-  |-> name      : ${config.systemInfo.projectName}
-  |-> version   : v${config.systemInfo.version}
-  |-> port      : ${config.port}
-  |-> env       : ${config.env}
-  |-> --------------------------------------------------
-  `);
+    |-> -----------------run success--------------------- <-|
+    |-> name      : ${config.systemInfo.projectName}                 <-|
+    |-> version   : v${config.systemInfo.version}                                <-|
+    |-> port      : ${config.port}                                  <-|
+    |-> env       : ${config.env}                                   <-|
+    |-> ------------------------------------------------- <-|
+    `);
   });
 }
 
