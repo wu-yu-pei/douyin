@@ -38,7 +38,6 @@ jobs:
           password: ${{ secrets.ACCESS_PASSWORD }}
           port: 22
           script: |
-            pm2 ls
             pm2 stop douyin
             pm2 delete douyin
             echo "stop ..."
