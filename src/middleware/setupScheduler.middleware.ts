@@ -13,7 +13,7 @@ export default async function () {
   for (let i = 0; i < schedulerFiles.length; i++) {
     const _path = path.resolve(config.paths.rootPath, schedulerFiles[i]);
 
-    if (config.scheduler[schedulerNames[i]].enable) {
+    if (config.scheduler[schedulerNames[i]]?.enable) {
       await import(_path);
       console.log(`|-> load scheduler: ${_path}`);
     } else {
