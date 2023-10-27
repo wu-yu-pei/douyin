@@ -16,9 +16,9 @@ const proConfig: any = {
     port: 3306,
     username: 'root',
     password: '123456.',
-    database: 'douyin',
+    database: 'juejin',
     dialect: 'mysql',
-    logging: false,
+    logging: true,
   },
   redisConfig: {
     port: 6379,

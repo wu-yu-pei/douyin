@@ -16,9 +16,4 @@ export default async function () {
 
     console.log(`|-> load model: ${_path}`);
   }
-
-  // 2.处理model 之间的关联关系
-  models.news.hasMany(models.images, { sourceKey: 'id', foreignKey: 'news_id', constraints: false });
-
-  models.images.belongsTo(models.news, { foreignKey: 'news_id', targetKey: 'id', constraints: false });
 }

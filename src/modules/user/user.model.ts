@@ -9,7 +9,15 @@ const User = sequelize.define(
       autoIncrement: true,
       primaryKey: true,
     },
-    u_id: {
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
