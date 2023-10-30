@@ -3,7 +3,9 @@ import bookService from './book.service';
 
 class BookController {
   async list(req: Request, res: Response) {
-    const result = await bookService.list();
+    const { limit = 10, offset = 0 } = req.query;
+
+    const result = await bookService.list(+limit, +offset);
 
     res.send({ code: 200, msg: 'success', data: result });
   }

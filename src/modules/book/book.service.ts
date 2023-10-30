@@ -3,8 +3,13 @@ import Article from '../article/article.model';
 import { Op } from 'sequelize';
 
 class BookService {
-  async list() {
-    return await Book.findAll();
+  async list(limit, offset) {
+    console.log(limit, offset, '--');
+
+    return await Book.findAll({
+      limit: limit,
+      offset: offset,
+    });
   }
   async findById(book_id) {
     console.log(book_id);
