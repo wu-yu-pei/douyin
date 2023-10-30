@@ -1,5 +1,6 @@
 import Book from '../book/book.model';
 import Article from '../article/article.model';
+import { Op } from 'sequelize';
 
 class BookService {
   async list() {
@@ -14,6 +15,27 @@ class BookService {
       },
       raw: true,
     });
+  }
+
+  async getSection(book_id) {
+    const sectionIds: any = await Book.findOne({
+      where: {
+        id: book_id + '',
+      },
+      attributes: ['section_ids'],
+    });
+
+    const section = await Article.findAll({
+      where: {
+        id: {
+          [Op.in]: sectionIds.section_ids.split('|'),
+        },
+        book_id: book_id + '',
+      },
+      attributes: ['title', 'id'],
+    });
+
+    return section;
   }
 
   async findArticleById(book_id, article_id) {

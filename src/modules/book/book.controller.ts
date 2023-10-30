@@ -15,6 +15,14 @@ class BookController {
     res.send({ code: 200, msg: 'success', data: result });
   }
 
+  async getSection(req: Request, res: Response) {
+    const { book_id } = req.params;
+
+    const result = await bookService.getSection(book_id);
+
+    res.send({ code: 200, msg: 'success', data: result });
+  }
+
   async findArticleById(req: Request, res: Response) {
     const { book_id, article_id } = req.params;
 
