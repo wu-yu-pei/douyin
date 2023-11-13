@@ -11,6 +11,7 @@ async function bootstrap() {
   app.listen(config.port, () => {
     new DefaultLog({
       name: config.systemInfo.projectName,
+      author: 'WYP.Growing',
       version: config.systemInfo.version,
       port: config.port,
       env: config.env,
