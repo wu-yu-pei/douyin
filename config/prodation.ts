@@ -20,6 +20,7 @@ const proConfig: any = {
     dialect: 'mysql',
     logging: true,
   },
+  
   redisConfig: {
     port: 6379,
     host: '8.219.66.21',
